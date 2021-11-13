@@ -1,9 +1,9 @@
 <?php
 //get tasklist array from POST
-$task_list = filter_input(INPUT_POST, 'tasklist', FILTER_DEFAULT,                  
+$shopping_list = filter_input(INPUT_POST, 'shoppinglist', FILTER_DEFAULT,                  
                           FILTER_REQUIRE_ARRAY);
-if ($task_list === NULL) {
-    $task_list = array();
+if ($shopping_list === NULL) {
+    $shopping_list = array();
 }
 
 //get action variable from POST
@@ -15,22 +15,22 @@ $errors = array();
 //process
 switch( $action ) {
     case 'add':
-        $new_task = filter_input(INPUT_POST, 'task');
-        if (empty($new_task)) {
-            $errors[] = 'The new task cannot be empty.';
+        $new_shopping = filter_input(INPUT_POST, 'Item');
+        if (empty($new_shopping)) {
+            $errors[] = 'The Item cannot be empty.';
         } else {
-            $task_list[] = $new_task;
+            $shopping_list[] = $new_shopping;
         }
         break;
     case 'delete':
-        $task_index = filter_input(INPUT_POST, 'taskid', FILTER_VALIDATE_INT);
-        if ($task_index === NULL || $task_index === FALSE) {
-            $errors[] = 'The task cannot be deleted.';
+        $shopping_index = filter_input(INPUT_POST, 'item', FILTER_VALIDATE_INT);
+        if ($shopping_index === NULL || $shopping_index === FALSE) {
+            $errors[] = 'The Item cannot be deleted.';
         } else {
-            unset($task_list[$task_index]);
-            $task_list = array_values($task_list);
+            unset($shopping_list[$shopping_index]);
+            $shopping_list = array_values($shopping_list);
         }
         break;
 }
-include('task_list.php');
+include('shopping_list.php');
 ?>
