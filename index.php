@@ -14,12 +14,13 @@ $errors = array();
 
 //process
 switch( $action ) {
-    case 'add':
-        $new_shopping = filter_input(INPUT_POST, 'Item');
+    case 'additem':
+        $new_shopping = filter_input(INPUT_POST, 'newitem');
         if (empty($new_shopping)) {
             $errors[] = 'The Item cannot be empty.';
         } else {
             $shopping_list[] = $new_shopping;
+            array_unshift($task_list, $new_task);
         }
         break;
     case 'delete':
