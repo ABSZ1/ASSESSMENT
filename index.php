@@ -40,7 +40,7 @@ switch( $action ) {
       $shopping_to_modify = $shopping_list[$shopping_index];
     }
     break;
-   
+
     
 }
 include('shopping_list.php');
