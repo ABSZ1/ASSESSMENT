@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Task List Manager</title>
+    <title>Shopping List Manager</title>
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
     <header>
-        <h1>Task List Manager</h1>
+        <h1>Shopping List Manager</h1>
     </header>
     <main>
         <!-- part 1: the errors -->
