@@ -20,10 +20,10 @@ switch( $action ) {
             $errors[] = 'The Item cannot be empty.';
         } else {
             $shopping_list[] = $new_shopping;
-            array_unshift($task_list, $new_task);
+            array_unshift($shopping_list, $new_shopping);
         }
         break;
-    case 'delete':
+    case 'delete':    
         $shopping_index = filter_input(INPUT_POST, 'item', FILTER_VALIDATE_INT);
         if ($shopping_index === NULL || $shopping_index === FALSE) {
             $errors[] = 'The Item cannot be deleted.';
@@ -32,6 +32,16 @@ switch( $action ) {
             $shopping_list = array_values($shopping_list);
         }
         break;
+    case 'Modify List':
+    $shopping_index = filter_input(INPUT_POST, 'item', FILTER_VALIDATE_INT);
+    if ($shopping_index === NULL || $shopping_index === FALSE){
+      $errors[] ='The Item cannot be modified.';
+    }else{
+      $shopping_to_modify = $shopping_list[$shopping_index];
+    }
+    break;
+   
+    
 }
 include('shopping_list.php');
 ?>
