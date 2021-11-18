@@ -33,15 +33,49 @@ switch( $action ) {
         }
         break;
     case 'Modify List':
-    $shopping_index = filter_input(INPUT_POST, 'item', FILTER_VALIDATE_INT);
-    if ($shopping_index === NULL || $shopping_index === FALSE){
-      $errors[] ='The Item cannot be modified.';
-    }else{
-      $shopping_to_modify = $shopping_list[$shopping_index];
+        $shopping_index = filter_input(INPUT_POST, 'item', FILTER_VALIDATE_INT);
+        if ($shopping_index === NULL || $shopping_index === FALSE){
+            $errors[] ='The Item cannot be modified.';
+      }else{
+        $shopping_to_modify = $shopping_list[$shopping_index];
+      }
+      break;
+  case 'Save Changes':
+    $i = filter_input(INPUT_POST, 'modifeditem', FILTER_VALIDATE_INT);
+    $modified_item = filter_input(INPUT_POST, 'modifieditem');
+    if (empty($modified_item)) {
+      $errors[] = 'The modified item cannot be empty'
+      }
+    else {
+      $shopping_list[$i] = $modified_item;
+      $modified_item = '';
     }
     break;
-   
-    
-}
-include('shopping_list.php');
+  case 'Cancel Changes':
+    $modified_item = '';
+    break;
+  case 'Promote Item':
+    $shopping_index = filter_input(INPUT_POST, 'item', FILTER_VALIDATE_INT);
+    if ($shopping_index === NULL || $shopping_index === FALSE) {
+      $errors[] = 'The item cannot be promoted.';
+    } 
+    elseif ($shopping_index == 0) {
+      $errors[] = 'You can't promote the first item.';
+      include('shopping_list.php');
+      } else {
+      $shopping_value = $shopping_list[$shopping_index];
+      $prior_shopping_value = $shopping_list[$shopping_index-1];
+      
+      $shopping_list[$shopping_index-1] = $shopping_value;
+      $shopping_list[$shopping_index] = $prior_shopping_value;
+     
+     break;
+      }
+      
+  case 'Sort List':
+    sort($shopping_list);
+    break;
+ }
+
+include('shopping_list.php')
 ?>
