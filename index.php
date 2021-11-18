@@ -44,9 +44,9 @@ switch( $action ) {
     $i = filter_input(INPUT_POST, 'modifeditem', FILTER_VALIDATE_INT);
     $modified_item = filter_input(INPUT_POST, 'modifieditem');
     if (empty($modified_item)) {
-      $errors[] = 'The modified item cannot be empty'
-      }
-    else {
+      $errors[] = 'The modified item cannot be empty';
+   }
+   else {
       $shopping_list[$i] = $modified_item;
       $modified_item = '';
     }
@@ -60,7 +60,7 @@ switch( $action ) {
       $errors[] = 'The item cannot be promoted.';
     } 
     elseif ($shopping_index == 0) {
-      $errors[] = 'You can't promote the first item.';
+      $errors[] = 'You cannot promote the first item.';
       include('shopping_list.php');
       } else {
       $shopping_value = $shopping_list[$shopping_index];
