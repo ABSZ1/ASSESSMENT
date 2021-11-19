@@ -85,7 +85,7 @@ value="<?php echo $item; ?>">
 <?php endforeach; ?>
 <label>Item:</label>
 <input type="hidden" name="modifieditemid" value="<?php echo $item_index; ?>">
-<input type="text" name="modifiedtask" value="<?php echo $item_to_modify; ?>"><br>
+<input type="text" name="modifieditem" value="<?php echo $item_to_modify; ?>"><br>
 <label>&nbsp;</label>
 <input type="submit" name="action" value="Save Changes">
 <input type="submit" name="action" value="Cancel Changes">
