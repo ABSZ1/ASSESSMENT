@@ -1,2 +1,6 @@
-# ASSESSMENT
-ASSESSMENT 
+# Assignment Contribution
+-----------------------------------------------------------------------------------------------
+Alex:
+
+
+Ashish:
