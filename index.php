@@ -74,7 +74,7 @@ $shopping_list[$item_index] = $prior_item_value;
 break;
 }
 case 'Sort Item':
-sort($shopping_list);
+sort($shopping_list, SORT_FLAG_CASE );
 break;
 }
 
