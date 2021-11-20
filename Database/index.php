@@ -44,7 +44,7 @@ $statement3->closeCursor();
 
 <!-- the head section -->
 <head>
-    <title>My Guitar Shop</title>
+    <title>Shopping List Manager</title>
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 
@@ -52,7 +52,7 @@ $statement3->closeCursor();
 <body>
 <header><h1>Shopping List Manager</h1></header>
 <main>
-    <h1>Product List</h1>
+    <h1>Shopping List</h1>
 
     <aside>
         <!-- display a list of categories -->
@@ -99,7 +99,7 @@ $statement3->closeCursor();
     </section>
 </main>
 <footer>
-    <p>&copy; <?php echo date("Y"); ?> My Guitar Shop, Inc.</p>
+    <p>&copy; <?php echo date("Y"); ?> Woolworths. Inc</p>
 </footer>
 </body>
 </html>
