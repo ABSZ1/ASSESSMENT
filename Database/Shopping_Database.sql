@@ -45,9 +45,9 @@ INSERT INTO products VALUES
 GRANT SELECT, INSERT, DELETE, UPDATE
 ON Shopping_Database.*
 TO mgs_user@localhost
-IDENTIFIED BY 'pa55word';
+IDENTIFIED BY '';
 
 GRANT SELECT
 ON products
 TO mgs_tester@localhost
-IDENTIFIED BY 'pa55word';
+IDENTIFIED BY '';
