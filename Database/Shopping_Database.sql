@@ -28,21 +28,18 @@ CREATE TABLE orders (
 
 -- insert data into the database
 INSERT INTO categories VALUES
-(1, 'Guitars'),
-(2, 'Basses'),
-(3, 'Drums');
+(1, 'Ambient'),
+(2, 'Frozen'),
+(3, 'Chilled');
 
 INSERT INTO products VALUES
-(1, 1, 'strat', 'Fender Stratocaster', '699.00'),
-(2, 1, 'les_paul', 'Gibson Les Paul', '1199.00'),
-(3, 1, 'sg', 'Gibson SG', '2517.00'),
-(4, 1, 'fg700s', 'Yamaha FG700S', '489.99'),
-(5, 1, 'washburn', 'Washburn D10S', '299.00'),
-(6, 1, 'rodriguez', 'Rodriguez Caballero 11', '415.00'),
-(7, 2, 'precision', 'Fender Precision', '799.99'),
-(8, 2, 'hofner', 'Hofner Icon', '499.99'),
-(9, 3, 'ludwig', 'Ludwig 5-piece Drum Set with Cymbals', '699.99'),
-(10, 3, 'tama', 'Tama 5-Piece Drum Set with Cymbals', '799.99');
+(1, 1, 'Brd', 'Bread', '6.50'),
+(2, 1, 'te', 'Tea', '9.75'),
+(3, 1, 'Man', 'Mango', '9.75'),
+(4, 2, 'Ff', 'Frozen Fruit', '6.59'),
+(5, 2, 'IC', 'Ice Cream', '8.99'),
+(6, 3, 'Crd', 'Custard', '9.99'),
+(7, 3, 'Mlk', 'Milk', '3.49');
 
 -- create the users and grant priveleges to those users
 GRANT SELECT, INSERT, DELETE, UPDATE
