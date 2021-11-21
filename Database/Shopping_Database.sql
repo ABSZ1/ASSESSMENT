@@ -1,9 +1,9 @@
--- create and select the database
+-- Create and select the database
 DROP DATABASE IF EXISTS Shopping_Database;
 CREATE DATABASE Shopping_Database;
 USE Shopping_Database;  -- MySQL command
 
--- create the tables
+-- Create the tables
 CREATE TABLE categories (
   categoryID       INT(11)        NOT NULL   AUTO_INCREMENT,
   categoryName     VARCHAR(255)   NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE orders (
   PRIMARY KEY (orderID)
 );
 
--- insert data into the database
+-- Insert data into the database
 INSERT INTO categories VALUES
 (1, 'Ambient'),
 (2, 'Frozen'),
@@ -41,7 +41,7 @@ INSERT INTO products VALUES
 (6, 3, 'Crd', 'Custard', '9.99'),
 (7, 3, 'Mlk', 'Milk', '3.49');
 
--- create the users and grant priveleges to those users
+-- Create the users and grant priveleges to those users
 GRANT SELECT, INSERT, DELETE, UPDATE
 ON Shopping_Database.*
 TO mgs_user@localhost
