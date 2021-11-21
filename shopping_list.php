@@ -24,7 +24,7 @@
 <!-- part 2: the Item -->
 <h2>Item:</h2>
 <?php if (count($shopping_list) == 0) : ?>
-<p>There are no Item in the Shopping list.</p>
+<p>There are no Items in the Shopping list.</p>
 <?php else: ?>
 <ul>
 <?php foreach( $shopping_list as $id => $item ) : ?>
