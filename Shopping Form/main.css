@@ -1,6 +1,6 @@
 /* the styles for the HTML elements */
-html {
-    background-color: rgb(192, 192, 192);
+html { 
+    background-color: rgb(232, 205, 155);
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -15,14 +15,18 @@ header {
     margin: .5em 0 1em;
 }
 header h1 {
+	text-align: center;
     color: black;
+	
 }
 main {
     margin-bottom: 1em;
+	
 }
 h1 {
     font-size: 150%;
     margin: .5em 0;
+	text-align: center;
 }
 h2 {
     font-size: 120%;
@@ -42,14 +46,16 @@ li {
 }
 a {
     color: rgb(41, 64, 124);
-    font-weight: bold;    
+    font-weight: bold;
 }
 a:hover {
     color: rgb(208, 133, 4);
+
 }
 p {
     margin: 0;
     padding-bottom: .5em;
+	
 }
 form {
     margin: 0;
@@ -57,6 +63,7 @@ form {
 }
 input[text], select {
     width: 15em;
+	text-align: center;
 }
 label {
     width: 5em;
