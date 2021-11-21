@@ -6,14 +6,18 @@ $name = filter_input(INPUT_POST, 'name');
 $price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
 
 // Validate inputs
-if ($category_id == null || $category_id == false ||
-        $code == null || $name == null || $price == null || $price == false) {
+if ($category_id == null || $category_id == false || $code == null || $name == null || $price == null || $price == false)
+	
+{
     $error = "Invalid product data. Check all fields and try again.";
-    include('error.php');
-} else {
-    require_once('database.php');
+    include ('error.php');
+}
 
-    // Add the product to the database  
+else
+{
+    require_once ('database.php');
+
+    // Add the product to the database
     $query = 'INSERT INTO products
                  (categoryID, productCode, productName, listPrice)
               VALUES
@@ -27,6 +31,6 @@ if ($category_id == null || $category_id == false ||
     $statement->closeCursor();
 
     // Display the Product List page
-    include('index.php');
+    include ('index.php');
 }
 ?>
