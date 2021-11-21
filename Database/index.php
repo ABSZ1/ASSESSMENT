@@ -113,7 +113,7 @@ $statement3->closeCursor();
          </section>
       </main>
       <footer>
-         <p>&copy; <?php echo date("Y"); ?> Woolworths. Inc</p>
+         <p>&copy; <?php echo date("Y"); ?> Woolworths Inc.</p>
       </footer>
    </body>
 </html>
