@@ -39,67 +39,81 @@ $statement3->execute();
 $products = $statement3->fetchAll();
 $statement3->closeCursor();
 ?>
+
 <!DOCTYPE html>
 <html>
 
-<!-- the head section -->
-<head>
-    <title>Shopping List Manager</title>
-    <link rel="stylesheet" type="text/css" href="main.css" />
-</head>
-
-<!-- the body section -->
-<body>
-<header><h1>Shopping List Manager</h1></header>
-<main>
-    <h1>Shopping List</h1>
-
-    <aside>
-        <!-- display a list of categories -->
-        <h2>Categories</h2>
-        <nav>
-        <ul>
-            <?php foreach ($categories as $category) : ?>
-            <li><a href=".?category_id=<?php echo $category['categoryID']; ?>">
-                    <?php echo $category['categoryName']; ?>
-                </a>
-            </li>
-            <?php endforeach; ?>
-        </ul>
-        </nav>          
-    </aside>
-
-    <section>
-        <!-- display a table of products -->
-        <h2><?php echo $category_name; ?></h2>
-        <table>
-            <tr>
-                <th>Code</th>
-                <th>Name</th>
-                <th class="right">Price</th>
-                <th>&nbsp;</th>
-            </tr>
-
-            <?php foreach ($products as $product) : ?>
-            <tr>
-                <td><?php echo $product['productCode']; ?></td>
-                <td><?php echo $product['productName']; ?></td>
-                <td class="right"><?php echo $product['listPrice']; ?></td>
-                <td><form action="delete_product.php" method="post">
-                    <input type="hidden" name="product_id"
+   <!--The head section -->
+   <head>
+      <title>Shopping List Manager</title>
+      <link rel="stylesheet" type="text/css" href="main.css" />
+   </head>
+   
+   <!--The body section -->
+   <body>
+      <header>
+         <h1>Shopping List Manager</h1>
+      </header>
+      <main>
+         <h1>Shopping List</h1>
+         <aside>
+		 
+            <!--Display a list of categories -->
+            <h2>Categories</h2>
+            <nav>
+               <ul>
+                  <?php foreach ($categories as $category) : ?>
+                  <li><a href=".?category_id=<?php echo $category['categoryID']; ?>">
+                     <?php echo $category['categoryName']; ?>
+                     </a>
+                  </li>
+                  <?php endforeach; ?>
+               </ul>
+            </nav>
+         </aside>
+         <section>
+		 
+            <!--Display a table of products -->
+            <h2><?php echo $category_name; ?></h2>
+            <table>
+               <tr>
+                  <th>Code</th>
+                  <th>Name</th>
+                  <th class="right">Price</th>
+                  <th>&nbsp;</th>
+               </tr>
+               <?php foreach ($products as $product) : ?>
+               <tr>
+                  <td><?php echo $product['productCode']; ?></td>
+                  <td><?php echo $product['productName']; ?></td>
+                  <td class="right"><?php echo $product['listPrice']; ?></td>
+                  <td>
+                     <form action="delete_product.php" method="post">
+                        <input type="hidden" name="product_id"
                            value="<?php echo $product['productID']; ?>">
-                    <input type="hidden" name="category_id"
+						   
+                        <input type="hidden" name="category_id"
                            value="<?php echo $product['categoryID']; ?>">
-                    <input type="submit" value="Delete">
-                </form></td>
-            </tr>
-            <?php endforeach; ?>
-        </table>
-        <p><a href="add_product_form.php">Add Product</a></p>
-    </section>
-</main>
-<footer>
-    <p>&copy; <?php echo date("Y"); ?> Woolworths. Inc</p>
-</footer>
-</body>
+						   
+                        <input type="submit" value="Delete">
+                  <td> <form action="add_product_form.php" method="post">
+				  
+                  <input type="hidden" name="product_id"
+                     value="<?php echo $product['productID']; ?>">
+					 
+                  <input type="hidden" name="category_id"
+                     value="<?php echo $product['categoryID']; ?>">
+					 
+                  <input type="submit" value="Modify">
+                  </form></td>
+               </tr>
+               <?php endforeach; ?>
+            </table>
+            <p><a href="add_product_form.php">Add Product</a></p>
+         </section>
+      </main>
+      <footer>
+         <p>&copy; <?php echo date("Y"); ?> Woolworths. Inc</p>
+      </footer>
+   </body>
 </html>
