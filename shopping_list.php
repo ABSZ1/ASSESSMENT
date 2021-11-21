@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Shopping List Manager</title>
+<title>Shopping List Form</title>
 <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
 <header>
-<h1>Shopping List Manager</h1>
+<h1>Shopping List Form</h1>
 </header>
 <main>
 <p><?php print_r($shopping_list); ?></p>
