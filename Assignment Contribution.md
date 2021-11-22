@@ -1,7 +1,7 @@
 # Assignment Contribution
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Alex:
-Throught out the projet we decided to split the task and make it fair for each member and updated the version on to git hub as well as that we would have calls outside 
+Throught out the projet we decided to split the task and make it fair for each member and updated the each version on to git hub as well as that we would have calls outside 
 of class in which we would work together to finish the task.
 
 Shopping Form
