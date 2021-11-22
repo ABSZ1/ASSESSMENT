@@ -9,7 +9,6 @@
          <h1>Shopping List Form</h1>
       </header>
       <main>
-         <p><?php print_r($shopping_list); ?></p>
 		 
 		 
          <!-- Part 1: The Errors -->
