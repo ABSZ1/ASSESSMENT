@@ -1,11 +1,10 @@
 # Assignment Contribution
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Alex:
-Throught out the projet we decided to split the task and make it fair for each member and updated the each version on to git hub as well as that we would have calls outside 
-of class in which we would work together to finish the task.
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Throughout the project we decided to split the assignment into tasks and make it fair for each member and updated the each version on to git hub as well as that, we would have calls outside of class in which we would work together to finish the task.
+
 Shopping Form
-     - main.css
+     -main.css
      -shopping_list.php
 Database
     -add_product.php
@@ -18,6 +17,3 @@ Database
     -main.css
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Ashish:
-
-Shopping Form
-Database
